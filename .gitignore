@@ -1,0 +1,45 @@
+# Ignore node_modules directory in both client and server
+client/node_modules/
+server/node_modules/
+
+# Ignore logs in both client and server
+client/logs/
+server/logs/
+*.log
+npm-debug.log*
+
+# Ignore OS files
+.DS_Store
+
+# Ignore environment variable files
+client/.env
+server/.env
+
+# Ignore build directories in both client and server
+client/dist/
+client/build/
+server/dist/
+server/build/
+
+# Ignore temporary files
+tmp/
+temp/
+
+# Ignore IDE specific files
+.vscode/
+.idea/
+
+# Ignore coverage reports
+client/coverage/
+server/coverage/
+
+# Ignore npm package lock files (optional, if you don't want to commit them)
+client/package-lock.json
+server/package-lock.json
+client/yarn.lock
+server/yarn.lock
+
+# Ignore optional npm install directory for AWS Lambda
+client/npm-packages/
+server/npm-packages/
+
