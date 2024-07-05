@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Monaco', sans-serif;
+}
+
+.FileTreeComponent {
+    width: 100%
+}
+
+.FileTreeComponent-in {
+    width: 100%;
+    color: white;
+}
+
+.FileTree-one {
+    width: 100%;
+    padding: .5rem;
+    font-size: .8rem;
+    padding-left: 2rem;
+}
+
+.tree {
+    width: 100%;
+    padding: 2rem;
+}
+
+.tree-node {
+    padding: .2rem;
+}
+
+.directory {
+    padding: .2rem;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+}
+
+.file {
+    padding-left: 2rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.directory-icon {
+    font-size: 1rem;
+    color: rgb(25, 143, 212);
+}
+
+.file-icon {
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+}

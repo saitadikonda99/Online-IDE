@@ -15,9 +15,10 @@ const Terminal = () => {
         isRender.current = true;
 
         const terminal = new XTerminal({
-            rows: 30,
-            cols: 80,
+            rows: 40,
+            cols: 50,
         });
+
         terminal.open(terRef.current);
 
         terminal.onData((data) => {
@@ -32,7 +33,7 @@ const Terminal = () => {
 
   return (
         <div ref={terRef} className="TerminalComponent" />
-  )
+   )
 }
 
 export default Terminal

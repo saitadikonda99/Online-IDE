@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.HomeComponent {
+    width: 100%;
+}
+
+.HomeComponent-in {
+    width: 100%;
+    height: 100vh;
+}
+
+.Home-Navbar {
+    height: 5vh;
+    width: 100%;
+    border: 1px solid black;
+}
+
+.Home-in {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.Home-one {
+    width: 20%;
+    height: 95vh;
+}
+
+.Home-one-in {
+    width: 100%;
+    height: 95vh;
+    background-color: rgb(13, 17, 22);
+    overflow: scroll;
+}
+
+.Home-two {
+    width: 80%;
+}
+
+.Home-two-in {
+    width: 100%;
+}
+
+.Home-editor {
+    width: 100%;
+    height: 55vh;
+    border: 1px solid black;
+}
+
+.Home-editor-expand {
+    height: 95vh;
+}
+
+.Home-terminal {
+    width: 100%;
+    height: 40vh;
+    overflow: scroll;
+    padding: .5rem;
+    background-color: black;
+}
+
+.Home-terminal-hidden {
+    display: none;
+}
