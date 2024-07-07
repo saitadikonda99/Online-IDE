@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react'
 
 import { Terminal as XTerminal } from '@xterm/xterm'
 import '@xterm/xterm/css/xterm.css'
-import socket from '../socket'
+import socket from '../../socket'
 
 const Terminal = () => {
 
@@ -15,7 +15,7 @@ const Terminal = () => {
         isRender.current = true;
 
         const terminal = new XTerminal({
-            rows: 40,
+            rows: 20,
             cols: 50,
         });
 
@@ -28,7 +28,7 @@ const Terminal = () => {
         socket.on("terminal:data", (data) => {
             terminal.write(data);
         })
-        
+
     },[]);
 
   return (

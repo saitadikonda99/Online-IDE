@@ -43,24 +43,65 @@
 
 .Home-two-in {
     width: 100%;
+    display: flex;
 }
 
 .Home-editor {
-    width: 100%;
-    height: 55vh;
+    width: 50%;
+    height: 95vh;
     border: 1px solid black;
 }
 
 .Home-editor-expand {
-    height: 95vh;
+    width: 100%;
 }
 
 .Home-terminal {
-    width: 100%;
-    height: 40vh;
+    width: 50%;
+    height: 95vh;
     overflow: scroll;
-    padding: .5rem;
+}
+
+.Home-terminal-in {
+    width: 100%;
+    height: 45vh;
     background-color: black;
+    overflow: scroll;
+}
+
+.Home-terminal-one {
+    border-bottom: 1px solid white;
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Home-terminal-one p {
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+}
+
+.Home-terminal-two {
+    padding: .8rem;
+}
+
+.terminal-icon {
+    font-size: 1.2rem;
+}
+
+.Home-terminal-hidden {
+    display: none;
+}
+
+.Home-Output {
+    width: 100%;
+    height: 50vh;
+    overflow: scroll;
+    background-color: white;
+    border: 2px solid black;
 }
 
 .Home-terminal-hidden {

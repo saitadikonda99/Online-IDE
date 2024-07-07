@@ -7,7 +7,7 @@ import { MdOutlineKeyboardArrowUp } from "react-icons/md";
 import { FaFolder } from "react-icons/fa6";
 import { FaFile } from "react-icons/fa6";
 
-const FileTree = () => {
+const FileTree = ({ onFileSelected }) => {
     const [fileTree, setFileTree] = useState([]);
 
     useEffect(() => {
@@ -28,31 +28,37 @@ const FileTree = () => {
                 <div className="FileTree-one">
                     <h1>Explorer</h1>
                 </div>
-                {renderTree(fileTree)}
+                {renderTree(fileTree, onFileSelected)}
             </div>
         </div>
     );
 };
 
-const renderTree = (nodes) => {
+const renderTree = (nodes, onFileSelected) => {
     return (
         <div className='tree'>
             {nodes.map((node) => (
-                <TreeNode key={node.name} node={node} />
+                <TreeNode key={node.name} node={node} onFileSelected={onFileSelected}/>
             ))}
         </div>
     );
 };
 
-const TreeNode = ({ node }) => {
+const TreeNode = ({ node, onFileSelected}) => {
     const [expanded, setExpanded] = useState(false);
 
     const handleToggle = () => {
         setExpanded(!expanded);
     };
 
+    const handleClick = (node) => {
+        if (node.type === 'file') {
+            onFileSelected(node.name);
+        }
+    }
+
     return (
-        <div className='tree-node'>
+        <div className='tree-node' onClick={() => handleClick(node)}>
             <div onClick={handleToggle} className={node.type === 'directory' ? 'directory' : 'file'}>
                 {node.type === 'directory' && (expanded ? <MdOutlineKeyboardArrowDown /> : <MdOutlineKeyboardArrowUp />)}
                 {node.type === 'directory' ? <FaFolder className='directory-icon' /> : <FaFile className='file-icon'/>}
@@ -61,7 +67,7 @@ const TreeNode = ({ node }) => {
             {node.type === 'directory' && expanded && node.children && (
                 <div className='children'>
                     {node.children.map((child) => (
-                        <TreeNode key={child.name} node={child} />
+                        <TreeNode key={child.name} node={child} onFileSelected={onFileSelected}/>
                     ))}
                 </div>
             )}
